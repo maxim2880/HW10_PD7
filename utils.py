@@ -8,6 +8,7 @@ def get_candidates(path):
 
 
 def format_candidates(candidates_list):
+    """Функция для форматирования выводимой информации на сайт"""
     result = "<pre>"
     for candidate in candidates_list:
         result += (
@@ -21,13 +22,14 @@ def format_candidates(candidates_list):
 
 
 def get_candidate_by_id(candidates_list, candidate_id):
-
+    """Функция для вывода информации о кандидате по его id"""
     for candidate in candidates_list:
         if candidate['id'] == candidate_id:
             return candidate
 
 
 def get_candidates_by_skill(candidates_list, candidate_skill):
+    """Функция для вывода списка кандидатов, которые обладают необходимыми навыками"""
     result = []
 
     for candidate in candidates_list:

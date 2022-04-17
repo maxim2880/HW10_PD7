@@ -4,6 +4,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
+
 # Главная страница сайта
 @app.route("/")
 def main():
@@ -30,5 +31,6 @@ def skills(skill):
     candidates_list = get_candidates("candidates.json")
 
     return format_candidates(get_candidates_by_skill(candidates_list, skill))
+
 
 app.run()
